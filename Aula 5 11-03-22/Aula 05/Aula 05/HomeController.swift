@@ -19,8 +19,16 @@ class HomeController: UIViewController {
     }
 
     @IBAction func authenticate(_ sender: UIButton) {
-        // TODO: - VERIFICAR SE OS DADOS ESTÃO VALIDOS, E CRAIR UM ALERTA DE SUCESSO, CASO CONTRÁRIO APRESENTAR UM ALERTA DE FALHA
-        
+        if emailTextField.text == "" || passwordTextField.text == "" {
+            present(createErrorAlert, animated: true, completion: nil)
+        } else if emailValidation(email: emailTextField.text!) {
+            present(createSuccessAlert, animated: true, completion: nil)
+        } else {
+            present(createWrongEmailAlert, animated: true, completion: nil)
+        }
+    }
+    
+    lazy var createErrorAlert: UIAlertController = {
         let alert = UIAlertController(title: "Erro", message: "O email ou a senha estão vazios.", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { action in
@@ -29,16 +37,41 @@ class HomeController: UIViewController {
         alert.view.backgroundColor = .darkGray
         alert.view.tintColor = UIColor(named: "AccentColor")
         
-        present(alert, animated: true, completion: nil)
+        return alert
+    }()
+    
+    lazy var createSuccessAlert: UIAlertController = {
+        let alert = UIAlertController(title: "Sucesso", message: "Conectado com sucesso!", preferredStyle: .alert)
         
-        if let pass = passwordTextField.text, let email = emailTextField.text {
-            print("O email é: \(email)")
-            print("A senha é: \(pass)")
-        }
-    }
+        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { action in
+            print("Confirmar foi tocado")
+        }))
+        alert.view.backgroundColor = .darkGray
+        alert.view.tintColor = UIColor(named: "AccentColor")
+        
+        return alert
+    }()
+    
+    lazy var createWrongEmailAlert: UIAlertController = {
+        let alert = UIAlertController(title: "Erro", message: "O email foi digitado incorretamente", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { action in
+            print("Confirmar foi tocado")
+        }))
+        alert.view.backgroundColor = .darkGray
+        alert.view.tintColor = UIColor(named: "AccentColor")
+        
+        return alert
+    }()
+
 }
 
 extension HomeController {
-    // TODO: - VERIFICAR SE O EMAIL É VÁLIDO
-    
+    func emailValidation(email: String) -> Bool {
+        if email.contains("@") && email.contains(".com") {
+            return true
+        }
+        
+        return false
+    }
 }
