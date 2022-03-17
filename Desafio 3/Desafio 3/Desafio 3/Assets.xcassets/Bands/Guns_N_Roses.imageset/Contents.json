@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Guns_N’_Roses.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

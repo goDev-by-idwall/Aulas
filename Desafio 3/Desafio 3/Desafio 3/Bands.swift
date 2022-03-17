@@ -1,0 +1,29 @@
+//
+//  Bands.swift
+//  Desafio 3
+//
+//  Created by Felipe Brigagão de Almeida on 16/03/22.
+//
+import UIKit
+
+struct Band {
+    var image: String
+    var name: String
+    var duration: String
+    var description: String
+    var genre: String
+    
+    static func bandsInfo() -> [Band] {
+        return  [Band(image:"Queen",name:"Queen",duration: "(1970-presente)",description: "Membros: Brian May, Roger Taylor | Antigos membros: Freddie Mercury, John Deacon | Discografia: 15 álbuns, 7 EPs, 72 singles | Queen nunca sai de moda, e o ótimo filme contando a história da banda ajudou a dar uma bombada. Bohemian Rhapsody, um de seus clássicos, é nada mais nada menos que a música do século XX mais tocada nos serviços de streaming. Saca só os prêmios que o Queen já faturou: Rock and Roll Hall of Fame, Grammy Hall of Fame, UK Music Hall of Fame, 4 BRIT Awards.", genre:"Rock"),
+                 Band(image:"Beatles",name:"The Beatles",duration: "(1960-1970)",description: "Membros: John Lennon, Paul McCartney, George Harrison, Ringo Starr | Discografia: 13 álbuns, 21 EPs, 63 singles | Uma palavra para definir os Beatles: fenômeno. Nenhuma banda vendeu tantos discos (estima-se que mais de 1 bilhão), nenhuma banda foi e é tão influente, extrapolando o âmbito propriamente musical. Beatles é simplesmente Beatles: insuperável. Os prêmios dizem tudo: Rock and Roll Hall of Fame, UK Music Hall of Fame, 11 Grammys, 4 Brit Awards, 3 World Music Awards", genre:"Rock"),
+                 Band(image:"Guns_N_Roses",name:"Guns N’ Roses",duration: "(1985-presente)",description: "Membros: Axl Rose, Duff McKagan, Slash, Dizzy Reed, Richard Fortus, Frank Ferrer, Melissa Reese | Antigos membros: Steven Adler, Matt Sorum, Izzy Stradlin | Discografia: 6 álbuns, 3 EPs, 19 singles | Dá pra dizer que o Guns já nasceu fazendo barulho: Appetite for Destruction, de 1987, é simplesmente o álbum de estreia mais vendido de toda a história. A lista de prêmios também é grande: 4 MTV Video Music Awards, 1 Billboard Music Award, 4 American Music Awards, 2 World Music Awards.", genre:"Rock"),
+                 Band(image:"Pink_Floyd",name:"Pink Floyd",duration: "(1965-2014)",description: "Membros: Nick Mason, David Gilmour, Richard Wright, Roger Waters, Syd Barrett, Bob Klose | Discografia: 15 álbuns, 5 EPs, 27 singles | Pink Floyd marcou a história da música com suas experimentações e letras papo-cabeça. Seu álbum The Wall, de 1979, tornou-se ícone da música mundial. Estes são seus prêmios: Rock and Roll Hall of Fame, UK Music", genre:"Rock"),
+                 Band(image:"Led_Zeppelin",name:"Led Zeppelin ",duration: "(1968-1980)",description: "Membros: Jimmy Page, Robert Plant, John Paul Jones, John Bonham | Discografia: 8 álbuns, 16 singles | Reconhecidamente uma das bandas mais influentes de todos os tempos, e contando com o gênio Jimmy Page na guitarra, o Led está no top 5 dos recordistas de vendas, com cerca de 300 milhões de discos vendidos. Quer mais? Saca a lista de prêmios: Rock and Roll Hall of Fame, UK Music Hall of Fame, 1 Grammy, 1 Polar Music Prize..", genre:"Rock"),
+                 Band(image:"Nirvana",name:"Nirvana",duration: "(1987-1994)",description: "Membros: Kurt Cobain, Krist Novoselic, Dave Grohl | Discografia: 3 álbuns, 2 EPs, 21 singles | Galerinha dos anos 90, vocês vão concordar que Nirvana marcou época. O que dizer de um álbum como Nevermind e músicas como Smells Like Teen Spirit e In Bloom? Vejamos sua lista de prêmios: 1 Grammy, 7 MTV Video Music Awards, 1 American Music Award, 1 BRIT Award.", genre:"Rock"),
+                 Band(image:"ACDC",name:"AC/DC",duration: "(1973-presente)",description: "Membros: Angus Young, Chris Slade, Stevie Young, Axl Rose | Antigos membros: Malcom Young, Phil Rudd, Cliff Williams, Brian Johnson | Discografia: 16 álbuns, 1 EP, 45 singles | Presença constante nas listas das maiores bandas de todos os tempos, o sucesso do AC/DC (que ainda está na estrada) não restringiu aos anos 70/80. Back in Black, de 1980, é um dos álbuns mais vendidos da história. Seus prêmios: ARIA Hall of Fame, 1 Grammy, 2 UK Music Video Awards, 4 Classic Rock Roll of Honour Awards.", genre:"Rock"),
+                 Band(image:"Red_Hot_Chilli_Peppers",name:"Red Hot Chilli Peppers",duration: "(1983-presente)",description: "Membros: Flea, Anthony Kiedis, Chad Smith, Josh Klinghoffer | Antigo membro: John Frusciante | Discografia: 11 álbuns, 5 EPs, 44 singles | A música dos anos 90 não seria a mesma sem o Red Hot Chilli Peppers. Com discos de sucesso como Blood Sugar Sex Magik e Californication, essa banda firmou-se definitivamente entre as maiores de todos os tempos. Estão no Rock and Rol Hall of Fame, no Hollywood Walk of Fame, e já faturaram 6 Grammys e 8 MTV Video Music Awards.", genre:"Rock"),
+                 Band(image:"Metallica",name:"Metallica",duration: "(1981-presente)",description: "Membros: James Hetfield, Lars Ulrich, Kirk Hammett, Robert Trujillo | Antigos membros: Dave Mustaine, Ron McGovney, Cliff Burton, Jason Newsted | Discografia: 10 álbuns, 3 EPs, 39 singles | Ícone do heavy metal mundial, Metallica é uma das bandas mais bem sucedidas e premiadas de todos os tempos. São 9 premiações no Grammy, além de 5 Billboard Music Awards, 3 MTV Video Music Awards, 2 American Music Awards. Quer mais?", genre:"Rock"),
+                 Band(image:"Iron_Maiden",name:"Iron Maiden",duration: "(1975-presente)",description: "Membros: Steve Harris, Dave Murray, Adrian Smith, Bruce Dickinson, Nicko McBrain, Janick Gers | Discografia: 16 álbuns, 4 EPs, 44 singles | Iron Maiden é um verdadeiro fenômeno do heavy metal. Desde 1982, quando lançou o álbum The Number of the Beast, tornou-se uma das bandas mais famosas de todo o mundo, vendendo centenas de milhões de discos. Prêmios: 1 Grammy, 1 BRIT Award, 10 Metal Hammer Awards.", genre:"Rock"),
+        ]
+    }
+}

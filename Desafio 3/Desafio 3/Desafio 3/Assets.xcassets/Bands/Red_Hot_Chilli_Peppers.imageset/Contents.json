@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Red_Hot_Chilli_Peppers.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
